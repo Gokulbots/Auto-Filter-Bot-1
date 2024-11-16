@@ -83,6 +83,8 @@ async def start(client:Client, message):
             InlineKeyboardButton('💸 ᴘʀᴇᴍɪᴜᴍ', callback_data='buy_premium')
         ],[
             InlineKeyboardButton('🚫 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 🚫', callback_data='earn')
+        ],[
+            InlineKeyboardButton('JOIN MY UPDATES CHANNEL', url='https://t.me/CINEMACCBOTUPDATES')
         ]]   
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(script.START_TXT.format(message.from_user.mention, get_status(), message.from_user.id),
@@ -111,6 +113,8 @@ async def start(client:Client, message):
             InlineKeyboardButton('💸 ᴘʀᴇᴍɪᴜᴍ', callback_data='buy_premium')
         ],[
             InlineKeyboardButton('🚫 ᴇᴀʀɴ ᴍᴏɴᴇʏ ᴡɪᴛʜ ʙᴏᴛ 🚫', callback_data='earn')
+        ],[
+            InlineKeyboardButton('JOIN MY UPDATES CHANNEL', url='https://t.me/CINEMACCBOTUPDATES')
         ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply_text(
@@ -461,7 +465,7 @@ async def set_shortner(c, m):
     try:
         URL = m.command[1]
         API = m.command[2]
-        resp = requests.get(f'https://{URL}/api?api={API}&url=https://telegram.me/MovieVillaYT').json()
+        resp = requests.get(f'https://{URL}/api?api={API}&url=https://telegram.me/DARKSARVAR1').json()
         if resp['status'] == 'success':
             SHORT_LINK = resp['shortenedUrl']
         await save_group_settings(grp_id, 'shortner', URL)
@@ -496,7 +500,7 @@ async def set_shortner_2(c, m):
     try:
         URL = m.command[1]
         API = m.command[2]
-        resp = requests.get(f'https://{URL}/api?api={API}&url=https://telegram.me/NobiDeveloperr').json()
+        resp = requests.get(f'https://{URL}/api?api={API}&url=https://telegram.me/OWNER_CC_BOT').json()
         if resp['status'] == 'success':
             SHORT_LINK = resp['shortenedUrl']
         await save_group_settings(grp_id, 'shortner_two', URL)
@@ -745,7 +749,7 @@ async def donation(bot, message):
     btn = [[
         InlineKeyboardButton(text="❌   ᴄʟᴏsᴇ   ❌", callback_data="close_data")
     ]]
-    yt=await message.reply_photo(photo='https://envs.sh/wam.jpg', caption=script.DONATE_TXT, reply_markup=InlineKeyboardMarkup(btn))
+    yt=await message.reply_photo(photo='https://graph.org/file/58bdd27ea0c9f12984a25-c67d5c3714b4f1796c.jpg', caption=script.DONATE_TXT, reply_markup=InlineKeyboardMarkup(btn))
     await asyncio.sleep(300)
     await yt.delete()
     await message.delete()
